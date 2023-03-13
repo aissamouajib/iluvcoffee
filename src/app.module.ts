@@ -8,8 +8,8 @@ import { ConfigModule } from '@nestjs/config';
 
 @Module({
   imports: [
-    CoffeesModule, 
-    ConfigModule.forRoot(), 
+    CoffeesModule,
+    ConfigModule.forRoot(),
     TypeOrmModule.forRoot({
       type: 'postgres',
       host: process.env.DATABASE_HOST,
@@ -18,8 +18,8 @@ import { ConfigModule } from '@nestjs/config';
       password: process.env.DATABASE_PASSWORD,
       database: process.env.DATABASE_NAME,
       autoLoadEntities: true,
-      synchronize: true, 
-    }), 
+      synchronize: true,
+    }),
     CoffeeRatingModule,
   ],
   controllers: [AppController],

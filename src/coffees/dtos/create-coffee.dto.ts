@@ -1,13 +1,13 @@
-import { IsArray, IsString } from "class-validator";
-import { Flavor } from "../entities/flavor.entity";
+import { IsArray, IsString } from 'class-validator';
+import { Flavor } from '../entities/flavor.entity';
 
 export class CreateCoffeeDto {
-    @IsString()
-    readonly name: string;
+  @IsString()
+  readonly name: string;
 
-    @IsString()
-    readonly brand: string;
+  @IsString()
+  readonly brand: string;
 
-    @IsArray()
-    readonly flavors: string[];
+  @IsArray()
+  readonly flavors: string[];
 }

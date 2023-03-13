@@ -7,9 +7,12 @@ import { Coffee } from './entities/coffee.entity';
 import { Flavor } from './entities/flavor.entity';
 
 @Module({
-    imports: [TypeOrmModule.forFeature([Coffee, Flavor, Event])], 
-    controllers: [CoffeesController],
-    providers: [CoffeesService, {provide: COFFEE_BRANDS, useValue: ['Brand 1', 'Brand 2']}],
-    exports: [CoffeesService]
+  imports: [TypeOrmModule.forFeature([Coffee, Flavor, Event])],
+  controllers: [CoffeesController],
+  providers: [
+    CoffeesService,
+    { provide: COFFEE_BRANDS, useValue: ['Brand 1', 'Brand 2'] },
+  ],
+  exports: [CoffeesService],
 })
 export class CoffeesModule {}
